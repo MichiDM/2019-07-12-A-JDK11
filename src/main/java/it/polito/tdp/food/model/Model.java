@@ -98,6 +98,8 @@ public class Model {
 		ConnectivityInspector<Food, DefaultWeightedEdge> inspector =
 				new ConnectivityInspector<Food, DefaultWeightedEdge>(this.grafo);
 		Set<Food> connessi = inspector.connectedSetOf(f);
+		
+		//List<Food> connessi = Graphs.neighborListOf(this.grafo,f);
 			
 		
 		// creo una lista per ordinarla in ordine decrescente di avgCalories

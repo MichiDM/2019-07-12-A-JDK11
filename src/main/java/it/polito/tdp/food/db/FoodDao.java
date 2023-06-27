@@ -50,10 +50,10 @@ public class FoodDao {
 	
 	public List<Food> getVertici(int porzioni){
 		String sql = "SELECT f.* "
-				+ "FROM porzioni p, food f "
+				+ "FROM `portion` p, food f "
 				+ "WHERE p.food_code = f.food_code "
 				+ "GROUP BY f.food_code "
-				+ "HAVING COUNT(*) >= ?" ;
+				+ "HAVING COUNT(*) = ?" ;
 		try {
 			Connection conn = DBConnect.getConnection() ;
 
